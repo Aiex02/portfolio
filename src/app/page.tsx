@@ -17,9 +17,8 @@ export default function Portfolio() {
     useState<Experience | null>(null);
 
   const openModal = (experience: Experience) => {
-  setSelectedExperience(experience);
-};
-
+    setSelectedExperience(experience);
+  };
 
   const closeModal = () => {
     setSelectedExperience(null);
@@ -246,7 +245,7 @@ export default function Portfolio() {
       <AnimatePresence>
         {selectedExperience && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -257,11 +256,21 @@ export default function Portfolio() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-gray-800 rounded-lg p-6 max-w-md w-full text-white relative"
+              className="
+      bg-gray-800 rounded-lg p-6 w-full max-w-md
+      text-white relative
+      overflow-y-auto max-h-screen
+    "
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute top-2 right-2 text-gray-400 hover:text-white"
+                className="
+        absolute top-2 right-2
+        text-gray-400 hover:text-white
+        bg-gray-700 rounded-full p-1
+        w-8 h-8 flex items-center justify-center
+        md:top-2 md:right-2
+      "
                 onClick={closeModal}
               >
                 ✕
