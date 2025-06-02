@@ -36,7 +36,7 @@ export default function Portfolio() {
               <div className="w-24 h-24 rounded-full  mb-4">
                 <Image
                   className="rounded-full"
-                  src={"/foto_perfil.png"}
+                  src={"/profile.png"}
                   alt={"foto"}
                   width={100}
                   height={100}
