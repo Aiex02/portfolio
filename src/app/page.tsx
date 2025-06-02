@@ -16,9 +16,10 @@ export default function Portfolio() {
   const [selectedExperience, setSelectedExperience] =
     useState<Experience | null>(null);
 
-  const openModal = (experience: any) => {
-    setSelectedExperience(experience);
-  };
+  const openModal = (experience: Experience) => {
+  setSelectedExperience(experience);
+};
+
 
   const closeModal = () => {
     setSelectedExperience(null);
