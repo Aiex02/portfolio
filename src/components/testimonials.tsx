@@ -13,4 +13,11 @@ export const testimonials = [
     role: "CEO",
     company: "Alfa Ritll",
   },
+   {
+    feedback:
+      "Trabalhar com o Guilherme foi uma excelente experiência. Ele demonstrou total comprometimento com prazos e entregou um trabalho de altíssima qualidade. Mostrou domínio técnico, proatividade e atenção aos mínimos detalhes. Sem dúvida, sua atuação foi essencial para o sucesso do projeto",
+    name: "Gabriel",
+    role: "Desenvolvedor Pleno",
+    company: "WordSeg/Labseg",
+  },
 ];
