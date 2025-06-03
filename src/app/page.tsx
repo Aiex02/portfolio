@@ -107,8 +107,11 @@ export default function Portfolio() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {projects.map((project, index) => (
-                <div
+                <a
                   key={index}
+                  href={project.video ? project.video : project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
                 >
                   <div className="relative aspect-square">
@@ -125,28 +128,8 @@ export default function Portfolio() {
                     <p className="text-gray-400 text-sm">
                       {project.description}
                     </p>
-                    <div className="flex gap-2 mt-2">
-                      {project.video && (
-                        <a
-                          href={project.video}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-full text-xs"
-                        >
-                          Ver Vídeo
-                        </a>
-                      )}
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-full text-xs"
-                      >
-                        Ver Repositório
-                      </a>
-                    </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </section>
