@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   FaAward,
   FaClock,
-  FaComments,
   FaGithub,
   FaQuoteLeft,
   FaWhatsapp,
@@ -287,7 +286,7 @@ export default function Portfolio() {
                       {testi.role} • {testi.company}
                     </p>
                   </div>
-                  <p className="text-gray-300 italic">"{testi.feedback}"</p>
+                  <p className="text-gray-300 italic">&ldquo;{testi.feedback}&rdquo;</p>
                 </li>
               ))}
             </ul>
