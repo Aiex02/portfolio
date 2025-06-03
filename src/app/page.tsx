@@ -286,7 +286,9 @@ export default function Portfolio() {
                       {testi.role} • {testi.company}
                     </p>
                   </div>
-                  <p className="text-gray-300 italic">&ldquo;{testi.feedback}&rdquo;</p>
+                  <p className="text-gray-300 italic">
+                    &ldquo;{testi.feedback}&rdquo;
+                  </p>
                 </li>
               ))}
             </ul>
@@ -309,25 +311,18 @@ export default function Portfolio() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="
-      bg-gray-800 rounded-lg p-6 w-full max-w-md
-      text-white relative
-      overflow-y-auto max-h-screen
-    "
+              className="bg-gray-800 rounded-lg p-4 w-full max-w-md text-white relative overflow-y-auto max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Botão de Fechar */}
               <button
-                className="
-        absolute top-2 right-2
-        text-gray-400 hover:text-white
-        bg-gray-700 rounded-full p-1
-        w-8 h-8 flex items-center justify-center
-        md:top-2 md:right-2
-      "
+                className="fixed top-4 right-4 bg-black bg-opacity-60 text-gray-300 hover:text-white rounded-full p-2 w-10 h-10 flex items-center justify-center shadow-md z-50"
                 onClick={closeModal}
               >
                 ✕
               </button>
+
+              {/* Conteúdo do Modal */}
               <div className="flex items-center gap-2 mb-4">
                 <Image
                   src={selectedExperience.icon}
@@ -345,7 +340,10 @@ export default function Portfolio() {
               <h4 className="text-lg font-semibold">
                 {selectedExperience.role}
               </h4>
-              <p className="mt-2">{selectedExperience.description}</p>
+              <p className="mt-2 whitespace-pre-line">
+                {selectedExperience.description}
+              </p>
+
               {selectedExperience?.techs && (
                 <div className="mt-4">
                   <h5 className="text-md font-semibold mb-2">
